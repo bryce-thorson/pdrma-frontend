@@ -4,8 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
 
 $brown--500: #231F20;
+$gray--300: #414042;
 $green--300: #74CE15;
 
 a {
@@ -20,6 +24,43 @@ header {
   & nav.navbar {
     background-color: $brown--500;
     height: 100px;
+    padding: 0 4rem;
+    & ul.navbar-nav {
+      & .dropdown {
+        position: unset;
+        & .nav-link.dropdown-toggle[aria-expanded="true"]{
+          color: $green--300;
+          &::after {
+            transform: rotate(180deg);
+          }
+          }
+        & .dropdown-menu {
+          width: 100%;
+          padding: 2rem;
+          background-color: $gray--300;
+          border: 1px solid $gray--300;
+          border-radius: 0;
+          margin: 0;
+          &.show {
+            display: flex;
+          }
+          & .col-lg-3 {
+            & h3 {
+              text-align: right;
+              color: white;
+              font-size: 1.25rem;
+              text-transform: uppercase;
+            }
+            & .dropdown-item {
+              color: $green--300;
+              &:hover {
+                background-color: #333333;
+              }
+            }
+          }
+        }
+      }
+    }
     & a.nav-link {
       color: white;
     }
