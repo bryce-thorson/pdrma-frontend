@@ -28,10 +28,19 @@ header {
     & ul.navbar-nav {
       & .dropdown {
         position: unset;
+        & .nav-link.dropdown-toggle[aria-expanded="false"]{
+          color: white;
+          &::after {
+            transition: all ease-in-out 0.15s;
+            transition-timing-function: cubic-bezier(1, 0, 0, 1);
+          }
+        }
         & .nav-link.dropdown-toggle[aria-expanded="true"]{
           color: $green--300;
           &::after {
             transform: rotate(180deg);
+            transition: all ease-in-out 0.15s;
+            transition-timing-function: cubic-bezier(1, 0, 0, 1);
           }
           }
         & .dropdown-menu {
@@ -73,13 +82,70 @@ header {
     padding: 2rem 0;
     & .hero-image {
       height: 300px;
+      position: relative;
+      transition: all ease-in-out 0.5s;
+      & .favorites-links {
+        display: none;
+        position: absolute;
+        padding-top: 1rem;
+      }
+      &:hover {
+        cursor: pointer;
+        & .favorites-links {
+          display: flex;
+          z-index: 20000;
+          color: white;
+          padding: 5rem 4rem;
+        }
+        &::after {
+          position: absolute;
+          height: auto;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+          background: rgba(35, 31, 32, 0.85);
+          content: '';
+          color: white;
+          text-align: center;
+          padding: 1.5rem;
+          font-size: 1.25rem;
+        }
+        &.my-favorites::after {
+          bottom: 2rem;
+          content: 'My Favorites';
+        }
+      }
+      &::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(35, 31, 32, 0.85);
+          height: 80px;
+          content: '';
+          color: white;
+          text-align: center;
+          padding: 1.5rem;
+        }
+        &.my-favorites::after {
+          bottom: 2rem;
+          content: 'My Favorites';
+        }
+        &.resources::after {
+          content: 'Resources';
+        }
+        &.training::after {
+          content: 'Training';
+        }
       & img {
         display: flex;
         object-fit: cover;
         width: 100%;
         height: 100%;
+        position: relative;
       }
-      &.top {
+      &.my-favorites {
         padding-bottom: 2rem;
       }
     }
