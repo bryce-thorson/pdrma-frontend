@@ -96,7 +96,6 @@ header {
     & .hero-image {
       height: 300px;
       position: relative;
-      
       & .favorites-links {
         display: flex;
         opacity: 0;
@@ -108,7 +107,7 @@ header {
         z-index: 2000;
         color: white;
       }
-      & .row {
+      & .row.favorites-button {
         & button {
           position: absolute;
           bottom: 0;
@@ -120,6 +119,27 @@ header {
           margin-bottom: 1.5rem;
           opacity: 0;
           transition: all ease-in-out 0.5s;
+        }
+      }
+      & .resource-link {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        color: white;
+        z-index: 2000;
+        padding: 5rem;
+        text-align: center;
+        opacity: 0;
+        transition: all ease-in-out 1s;
+        transition-timing-function: cubic-bezier(0.05, 0.82, 0.165, 1);
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        & p.resource-desc {
+          max-width: 300px;
+          margin: 0 auto;
+          padding-bottom: 1.5rem;
         }
       }
       &::after {
@@ -137,7 +157,7 @@ header {
         }
       &:hover {
         cursor: pointer;
-        & .favorites-links {
+        & .favorites-links, & .resource-link {
           opacity: 1;
         }
         &::after {
@@ -153,7 +173,7 @@ header {
           padding: 1.5rem;
           font-size: 1.25rem;
         }
-        & button {
+        & .row.favorites-button button {
           opacity: 1;
         }
       }
