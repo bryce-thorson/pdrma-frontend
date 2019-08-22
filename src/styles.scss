@@ -20,6 +20,19 @@ a {
   }
 }
 
+button.btn-primary {
+  background-color: $green--300;
+}
+button.btn-secondary {
+  border: 2px solid $green--300;
+  color: $green--300;
+  background-color: rgba(35, 31, 32, 0);
+  &:hover {
+    color: white;
+    background-color: $green--300;
+  }
+}
+
 header {
   & nav.navbar {
     background-color: $brown--500;
@@ -79,41 +92,34 @@ header {
 
 .main--container {
   & .hero-section {
-    padding: 2rem 0;
+    margin: 2rem 0;
     & .hero-image {
       height: 300px;
       position: relative;
-      transition: all ease-in-out 0.5s;
+      
       & .favorites-links {
-        display: none;
+        display: flex;
+        opacity: 0;
         position: absolute;
         padding-top: 1rem;
+        transition: all ease-in-out 1s;
+        transition-timing-function: cubic-bezier(0.05, 0.82, 0.165, 1);
+        padding: 5rem 4rem;
+        z-index: 2000;
+        color: white;
       }
-      &:hover {
-        cursor: pointer;
-        & .favorites-links {
-          display: flex;
-          z-index: 20000;
-          color: white;
-          padding: 5rem 4rem;
-        }
-        &::after {
+      & .row {
+        & button {
           position: absolute;
-          height: auto;
+          bottom: 0;
           left: 0;
           right: 0;
-          bottom: 0;
-          top: 0;
-          background: rgba(35, 31, 32, 0.85);
-          content: '';
-          color: white;
-          text-align: center;
-          padding: 1.5rem;
-          font-size: 1.25rem;
-        }
-        &.my-favorites::after {
-          bottom: 2rem;
-          content: 'My Favorites';
+          margin-left: auto;
+          margin-right: auto;
+          z-index: 2000;
+          margin-bottom: 1.5rem;
+          opacity: 0;
+          transition: all ease-in-out 0.5s;
         }
       }
       &::after {
@@ -127,9 +133,31 @@ header {
           color: white;
           text-align: center;
           padding: 1.5rem;
+          transition: all ease 0.5s;
         }
+      &:hover {
+        cursor: pointer;
+        & .favorites-links {
+          opacity: 1;
+        }
+        &::after {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 300px;
+          background: rgba(35, 31, 32, 0.85);
+          content: '';
+          color: white;
+          text-align: center;
+          padding: 1.5rem;
+          font-size: 1.25rem;
+        }
+        & button {
+          opacity: 1;
+        }
+      }
         &.my-favorites::after {
-          bottom: 2rem;
           content: 'My Favorites';
         }
         &.resources::after {
@@ -146,7 +174,7 @@ header {
         position: relative;
       }
       &.my-favorites {
-        padding-bottom: 2rem;
+        margin-bottom: 2rem;
       }
     }
   }
