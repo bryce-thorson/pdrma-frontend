@@ -105,6 +105,7 @@ header {
       position: fixed;
       left: 0;
       z-index: 950;
+      top: 10rem;
       & .search-module, & .account-module {
         background-color: $gray--300;
         width: 3rem;
@@ -295,8 +296,8 @@ header {
   & .sidebar-container {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    right: 1rem;
+    position: absolute;
+    right: -10rem;
     z-index: -1;
     & .sidebar-item {
       width: 200px;
