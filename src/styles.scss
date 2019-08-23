@@ -38,11 +38,16 @@ header {
     background-color: $brown--500;
     height: 100px;
     padding: 0 4rem;
+    & .navbar-brand {
+      max-width: 150px;
+    }
     & ul.navbar-nav {
       & .dropdown {
         position: unset;
         & .nav-link.dropdown-toggle[aria-expanded="false"]{
           color: white;
+          text-transform: uppercase;
+          font-size: 0.8rem;
           &::after {
             transition: all ease-in-out 0.15s;
             transition-timing-function: cubic-bezier(1, 0, 0, 1);
@@ -50,6 +55,8 @@ header {
         }
         & .nav-link.dropdown-toggle[aria-expanded="true"]{
           color: $green--300;
+          text-transform: uppercase;
+          font-size: 0.8rem;
           &::after {
             transform: rotate(180deg);
             transition: all ease-in-out 0.15s;
@@ -104,10 +111,10 @@ header {
         transition: all ease-in-out 1s;
         transition-timing-function: cubic-bezier(0.05, 0.82, 0.165, 1);
         padding: 5rem 4rem;
-        z-index: 2000;
+        z-index: 900;
         color: white;
       }
-      & .row.favorites-button {
+      & .favorites-button {
         & button {
           position: absolute;
           bottom: 0;
@@ -115,18 +122,18 @@ header {
           right: 0;
           margin-left: auto;
           margin-right: auto;
-          z-index: 2000;
+          z-index: 900;
           margin-bottom: 1.5rem;
           opacity: 0;
           transition: all ease-in-out 0.5s;
         }
       }
-      & .resource-link {
+      & .resource-link, & .training-link {
         display: flex;
         flex-direction: column;
         position: absolute;
         color: white;
-        z-index: 2000;
+        z-index: 900;
         padding: 5rem;
         text-align: center;
         opacity: 0;
@@ -136,7 +143,7 @@ header {
         margin-right: auto;
         left: 0;
         right: 0;
-        & p.resource-desc {
+        & .resource-desc, & .training-desc {
           max-width: 300px;
           margin: 0 auto;
           padding-bottom: 1.5rem;
@@ -156,8 +163,7 @@ header {
           transition: all ease 0.5s;
         }
       &:hover {
-        cursor: pointer;
-        & .favorites-links, & .resource-link {
+        & .favorites-links, & .resource-link, & .training-link {
           opacity: 1;
         }
         &::after {
