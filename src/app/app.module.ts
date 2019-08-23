@@ -7,6 +7,10 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentPageComponent } from './content-page/content-page.component';
+import { MyMembershipComponent } from './my-membership/my-membership.component';
+import { EmployeeDirComponent } from './my-membership/employee-dir/employee-dir.component';
+import { BoardOfDirComponent } from './my-membership/board-of-dir/board-of-dir.component';
+import { GovernanceComponent } from './my-membership/governance/governance.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { ContentPageComponent } from './content-page/content-page.component';
     HomepageComponent,
     HeaderComponent,
     FooterComponent,
-    ContentPageComponent
+    ContentPageComponent,
+    MyMembershipComponent,
+    EmployeeDirComponent,
+    BoardOfDirComponent,
+    GovernanceComponent
   ],
   imports: [
     BrowserModule,
