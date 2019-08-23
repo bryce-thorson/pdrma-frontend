@@ -94,10 +94,31 @@ header {
       color: white;
     }
   }
+  & .search-sticky-module {
+      position: fixed;
+      left: 0;
+      z-index: 950;
+      & .search-module, & .account-module {
+        background-color: $gray--300;
+        width: 3rem;
+        height: 3rem;
+        border: 1px solid white;
+        position: relative;
+        & i {
+          color: white;
+          position: absolute;
+          top: 0.8rem;
+          margin-left: auto;
+          margin-right: auto;
+          left: 0.9rem;
+        }
+      }
+    }
 }
 
 
 .main--container {
+  max-width: 1600px;
   & .hero-section {
     margin: 2rem 0;
     & .hero-image {
@@ -254,6 +275,13 @@ header {
       }
     }
   }
+}
+
+.content--container {
+  max-width: 1000px;
+  padding-top: 2rem;
+  padding-right: 10%;
+  margin-left: 10%;
 }
 
 footer {
