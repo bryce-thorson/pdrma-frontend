@@ -388,6 +388,37 @@ header {
           border-radius: 0;
         }
       }
+      & .contact-card {
+        padding: 1rem;
+        background-color: #efefef;
+          & img {
+            height: auto;
+          }
+          & .contact-item {
+            border: 1px solid $gray--300;
+            padding: 0.5rem 1rem;
+            & ul {
+              margin: 0;
+            }
+            & .board.contact-item-title {
+              display: none;
+            }
+            &.bottom {
+              border: none;
+              padding-left: 0;
+            }
+          }
+          & .appointment, & .term-info {
+            display: flex;
+            & p {
+              margin: 0;
+            }
+          }
+          & label {
+            font-weight: bold;
+            margin-right: 1rem;
+          }
+        }
     }
   }
   & form {
