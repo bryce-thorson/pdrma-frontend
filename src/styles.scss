@@ -543,6 +543,7 @@ header {
 
       & .card {
         border: none;
+
         & .search-img {
           border-radius: 50%;
           height: 6rem;
@@ -550,6 +551,7 @@ header {
           background-color: $blue--300;
           border: none;
           position: relative;
+
           &::before {
             content: 'G';
             position: absolute;
@@ -562,16 +564,35 @@ header {
             font-weight: 900;
           }
         }
+
         & .card-body {
           & .result-title {
             margin-bottom: 0;
             font-size: 1.5rem;
           }
+
           & .result-desc {
             padding-top: 1rem;
           }
+
           & .external-link {
             color: $blue--300;
+          }
+        }
+      }
+
+      & .pagination {
+        & a {
+          color: $green--300;
+        }
+
+        & .page-item {
+          &.active {
+            & .page-link {
+              background-color: $green--300;
+              color: white;
+              border: 1px solid $green--300;
+            }
           }
         }
       }
