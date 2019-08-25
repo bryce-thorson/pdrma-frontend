@@ -11,6 +11,7 @@ import { MyMembershipComponent } from './my-membership/my-membership.component';
 import { EmployeeDirComponent } from './my-membership/employee-dir/employee-dir.component';
 import { BoardOfDirComponent } from './my-membership/board-of-dir/board-of-dir.component';
 import { GovernanceComponent } from './my-membership/governance/governance.component';
+import { SearchComponent } from './content-page/search/search.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GovernanceComponent } from './my-membership/governance/governance.compo
     MyMembershipComponent,
     EmployeeDirComponent,
     BoardOfDirComponent,
-    GovernanceComponent
+    GovernanceComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
