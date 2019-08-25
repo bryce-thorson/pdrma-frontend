@@ -420,6 +420,35 @@ header {
           }
         }
     }
+    & .governance-committees {
+      & .nav-link {
+        background-color: #F1F2F2;
+        color: #000;
+        margin: 0.5rem 0;
+        padding: 1rem;
+        border: 1px solid rgba(0,0,0,0);
+        &.active {
+          background-color: #efefef;
+          color: #000;
+          border-color: $gray--300;
+        }
+      }
+      & .contact-card {
+        padding: 1rem;
+        background-color: #efefef;
+        & .members-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          & li {
+            display: flex;
+            & p {
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
   }
   & form {
     & .form-row.form-buttons-row {
