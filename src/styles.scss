@@ -340,6 +340,34 @@ header {
   & .main-content {
     max-width: 1200px;
     padding: 0 2rem 0 6rem;
+    & .nav-link {
+      font-size: 0.9rem;
+    }
+    & .contact-card {
+      & img {
+        height: 100%;
+        object-fit: cover;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      & .ask-me-about .contact-item-list li {
+        padding: 0.25rem 0;
+      }
+    }
+    & .search-results-view {
+      font-weight: bold;
+    }
+    & .searchbar-nav {
+      justify-content: center;
+      padding: 2rem;
+      & form input {
+        width: 600px;
+        padding: 1.5rem 0.25rem;
+      }
+      & form button {
+        padding: 0.7rem;
+      }
+    }
   }
   & form {
     & .form-row.form-buttons-row {
