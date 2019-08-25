@@ -11,6 +11,7 @@ body {
 $brown--500: #231F20;
 $gray--300: #414042;
 $green--300: #74CE15;
+$blue--300: #169DD3;
 
 a {
   color: $green--300;
@@ -538,6 +539,41 @@ header {
     & .search-page {
       & .searchbar-nav {
         justify-content: left;
+      }
+
+      & .card {
+        border: none;
+        & .search-img {
+          border-radius: 50%;
+          height: 6rem;
+          width: 6rem;
+          background-color: $blue--300;
+          border: none;
+          position: relative;
+          &::before {
+            content: 'G';
+            position: absolute;
+            color: white;
+            top: 0.75rem;
+            bottom: 0;
+            left: 1.8rem;
+            right: 0;
+            font-size: 3rem;
+            font-weight: 900;
+          }
+        }
+        & .card-body {
+          & .result-title {
+            margin-bottom: 0;
+            font-size: 1.5rem;
+          }
+          & .result-desc {
+            padding-top: 1rem;
+          }
+          & .external-link {
+            color: $blue--300;
+          }
+        }
       }
     }
   }
