@@ -96,15 +96,26 @@ header {
 
           & .col-lg-3 {
             & h3 {
-              text-align: right;
+              text-align: left;
               color: white;
               font-size: 1.25rem;
               text-transform: uppercase;
             }
-
-            & .dropdown-item {
-              color: $green--300;
-
+            & .menu-item {
+              & i {
+                color: white;
+                padding-right: 1rem;
+              }
+              & a {
+                padding-left: 0;
+              }
+              & .dropdown-item {
+                color: $green--300;
+                white-space: normal;
+                &:hover {
+                  background-color: #333333;
+                }
+              }
               &:hover {
                 background-color: #333333;
               }
@@ -143,6 +154,13 @@ header {
       }
     }
   }
+}
+
+#contentBox.ia-contentBox {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 6rem !important;
+  padding-top: 0 !important;
 }
 
 
@@ -590,7 +608,7 @@ header {
           &.active {
             & .page-link {
               background-color: $green--300;
-              color: white;
+              color: white !important;
               border: 1px solid $green--300;
             }
           }
@@ -690,6 +708,8 @@ footer {
       & h3.district-name {
         font-size: 1.5rem;
         text-transform: uppercase;
+        color: white;
+        padding-bottom: 1rem;
       }
 
       & ul {
