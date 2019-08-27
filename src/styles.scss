@@ -184,6 +184,9 @@ header {
         padding: 5rem 4rem;
         z-index: 900;
         color: white;
+        & .favorite-title {
+          padding-bottom: 0.5rem;
+        }
       }
 
       & .favorites-button {
@@ -683,7 +686,9 @@ footer {
   padding: 2rem 0;
   color: white;
   margin-top: 2rem;
-
+  & a {
+    color: $green--300 !important;
+  }
   & .footer-top {
     & ul.sitemap {
       list-style: none;
