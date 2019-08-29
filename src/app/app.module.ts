@@ -12,6 +12,9 @@ import { EmployeeDirComponent } from './my-membership/employee-dir/employee-dir.
 import { BoardOfDirComponent } from './my-membership/board-of-dir/board-of-dir.component';
 import { GovernanceComponent } from './my-membership/governance/governance.component';
 import { SearchComponent } from './content-page/search/search.component';
+import { MyHealthBenefitsComponent } from './content-page/my-health-benefits/my-health-benefits.component';
+import { PpoComponent } from './content-page/ppo/ppo.component';
+import { PpoResourcesComponent } from './content-page/ppo-resources/ppo-resources.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { SearchComponent } from './content-page/search/search.component';
     EmployeeDirComponent,
     BoardOfDirComponent,
     GovernanceComponent,
-    SearchComponent
+    SearchComponent,
+    MyHealthBenefitsComponent,
+    PpoComponent,
+    PpoResourcesComponent
   ],
   imports: [
     BrowserModule,
