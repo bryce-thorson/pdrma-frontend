@@ -357,6 +357,10 @@ header {
   }
 }
 
+.content-title {
+  text-transform: uppercase;
+}
+
 .content--container {
   padding: 2rem 0 0 0;
   margin: 0 auto;
@@ -690,6 +694,15 @@ header {
     text-transform: uppercase;
     &:hover {
       opacity: 0.9;
+    }
+  }
+}
+
+.benefit-detail {
+  & ul {
+    color: $green--300;
+    & li {
+      padding: 0.5rem 0;
     }
   }
 }
