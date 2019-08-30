@@ -136,21 +136,28 @@ header {
     z-index: 950;
     top: 10rem;
 
+    & .account-module {
+      background-color: $blue--300;
+    }
+    & .search-module {
+      background-color: $gray--300;
+    }
+
     & .search-module,
     & .account-module {
-      background-color: $gray--300;
-      width: 3rem;
-      height: 3rem;
+      width: 4rem;
+      height: 4rem;
       border: 1px solid white;
       position: relative;
 
       & i {
         color: white;
         position: absolute;
-        top: 0.8rem;
+        top: 1.2rem;
         margin-left: auto;
         margin-right: auto;
-        left: 0.9rem;
+        left: 1.2rem;
+        font-size: 1.3rem;
       }
     }
   }
@@ -239,7 +246,7 @@ header {
         content: '';
         color: white;
         text-align: center;
-        padding: 1.5rem;
+        padding: 1rem 0 0 0;
         transition: all ease 0.5s;
       }
 
@@ -261,12 +268,16 @@ header {
           content: '';
           color: white;
           text-align: center;
-          padding: 1.5rem;
-          font-size: 1.25rem;
         }
 
         & .row.favorites-button button {
           opacity: 1;
+        }
+      }
+
+      &.my-favorites, &.resources, &.training {
+        &::after {
+          font-size: 1.5rem;
         }
       }
 
@@ -359,6 +370,7 @@ header {
 
 .content-title {
   text-transform: uppercase;
+  margin-left: 0;
 }
 
 .content--container {
@@ -428,6 +440,25 @@ header {
 
     & .nav-link {
       font-size: 0.9rem;
+    }
+    & .employee-directory {
+      & .contact-card {
+        height: 240px;
+        & .card-title {
+          margin-bottom: 0;
+        }
+        & img {
+          height: 100%;
+          max-height: 240px;
+          object-fit: cover;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+  
+        & .ask-me-about .contact-item-list li {
+          padding: 0.25rem 0;
+        }
+      }
     }
 
     & .contact-card {
@@ -591,6 +622,9 @@ header {
         }
 
         & .card-body {
+          a {
+            color: $green--300;
+          }
           & .result-title {
             margin-bottom: 0;
             font-size: 1.5rem;
